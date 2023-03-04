@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from './services/student.service';
 
 @Component({
   selector: 'app-student',
@@ -11,7 +12,7 @@ export class StudentComponent implements OnInit {
   result: any;
 
   constructor(
-    // private studentService: StudentService
+    private studentService: StudentService
   ) { }
 
   ngOnInit(): void {
@@ -35,8 +36,8 @@ export class StudentComponent implements OnInit {
 
   // }
 
-  SaveDataInConsol(info: { sumVal: number; name: string; }) {
-    console.log('SaveDataInConsol', info);
+  SaveDataInConsole(info: { sumVal: number; name: string; }) {
+    console.log('SaveDataInConsole', info);
   }
 
 }

@@ -1,3 +1,4 @@
+import { HttpClientModule } from "@angular/common/http";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { AppRoutingModule } from "src/app/app-routing.module";
 import { StudentService } from './services/student.service';
@@ -5,7 +6,7 @@ import { StudentComponent } from "./student.component";
 
 
 describe('StudentComponent', () => {
-  
+
   let component: StudentComponent;
   let fixture: ComponentFixture<StudentComponent>;
 
@@ -16,7 +17,8 @@ describe('StudentComponent', () => {
         StudentService
       ],
       imports: [
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule
       ]
     })
     .compileComponents();
@@ -36,5 +38,5 @@ describe('StudentComponent', () => {
 
   //   expect(component.calculate).toHaveBeenCalled();
   // });
-  
+
 });
